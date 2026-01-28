@@ -6,6 +6,11 @@
 
 
 
+
+
+
+
+
 SEVEN is a Chrome extension that blocks websites based on user-defined URLs and displays thematic overlays inspired by the Seven Deadly Sins. Perfect for focusing, self-discipline, or just a bit of dark humor while browsing.
 
 Features
