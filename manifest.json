@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "SEVEN",
+  "version": "1.0",
+  "description": "Seven Deadly Sins Chrome Extension",
+  "options_page": "options.html",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SEVEN"
+  },
+
+  "permissions": ["storage"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "envy.jpg",
+        "wrath.jpg",
+        "lust.jpg",
+        "sloth.jpg",
+        "greed.jpg",
+        "gluttony.jpg",
+        "pride.jpg"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

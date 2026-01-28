@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seven Sins Breathing Cards</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #0b0b0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.card {
+    width: 380px;
+    height: 460px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: breathe 6s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+    filter: blur(20px);
+}
+
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 18px;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+}
+
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 50px rgba(255,255,255,0.25);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+}
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+
+.envy::before {
+    background: conic-gradient(
+        #00ff66,
+        #00cc44,
+        #009933,
+        #33ff99,
+        #00ff66
+    );
+}
+
+.wrath::before {
+    background: conic-gradient(
+        #ff1a1a,
+        #b30000,
+        #ff4d4d,
+        #ff0000,
+        #660000,
+        #ff1a1a
+    );
+}
+
+.lust::before {
+    background: conic-gradient(
+        #ff0077,
+        #ff3399,
+        #cc0066,
+        #ff66aa,
+        #ff0077
+    );
+}
+
+.sloth::before {
+    background: conic-gradient(
+        #66ccff,
+        #3399ff,
+        #00cc69,
+        #18d6b9,
+        #66ccff
+    );
+}
+
+.greed::before {
+    background: conic-gradient(
+        #00ff88,
+        #00cc66,
+        #33ff99,
+        #ffd700,
+        #b38f00,
+        #00ff88
+    );
+}
+
+.gluttony::before {
+    background: conic-gradient(
+        #ff1900,
+        #ff3a33,
+        #cc6300,
+        #010502,
+        #ffcf33,
+        #ff0000
+    );
+}
+
+.pride::before {
+    background: conic-gradient(
+        #ffd700,
+        #ffcc33,
+        #ffea00,
+        #ffb700,
+        #ffd700
+    );
+}
+
+
+.card img {
+    position: relative;
+    z-index: 2;
+    width: 89%;
+    height:89%;
+    border-radius: 10px;
+    object-fit: cover;
+    align-self: center
+    
+}
+
+input{
+    margin-top: 25px;
+    border: none;
+}
+
+.carousel-item input.form-control {
+  width: 370px; /* or 80% */
+  max-width: 130%;
+  border: none;
+  
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+<div id="carousel" class="carousel slide" data-bs-ride="false">
+   
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+   
+      <div class="card envy">
+        <img src="envy.jpg" alt="">
+      </div>
+
+      <input type="text" class="form-control" id="einp">
+      
+
+    </div>
+
+    <div class="carousel-item">
+      <div class="card wrath">
+         <img src="wrath.jpg" alt="">
+      </div>
+       <input type="text" class="form-control" id="winp">
+    </div>
+
+    <div class="carousel-item">
+      <div class="card lust">
+        <img src="lust.jpg" alt="">
+      </div>
+       <input type="text" class="form-control" id="linp">
+    </div>
+
+    <div class="carousel-item">
+      <div class="card sloth">
+        <img src="sloth.jpg" alt="">
+      </div>
+       <input type="text" class="form-control" id="sinp">
+    </div>
+
+    <div class="carousel-item">
+      <div class="card greed">
+        <img src="greed.jpg" alt="">
+      </div>
+       <input type="text" class="form-control" id="grinp">
+    </div>
+
+    <div class="carousel-item">
+      <div class="card gluttony">
+        <img src="gluttony.jpg" alt="">
+      </div>
+       <input type="text" class="form-control" id="ginp">
+    </div>
+
+    <div class="carousel-item">
+      <div class="card pride">
+        <img src="pride.jpg" alt="">
+      </div>
+       <input type="text" class="form-control" id="pinp">
+    </div>
+
+  </div>
+
+
+  <button class="btn btn-primary" style="margin-left: 157px; margin-top: 18px;" id="save">Save</button>
+
+  
+
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+<script src="options.js"></script>
+
+</body>
+</html>
