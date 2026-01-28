@@ -80,7 +80,8 @@ Manifest V3: Built using Chrome Manifest V3, so content scripts run securely and
 
 Screenshots
 
-(You can add screenshots of the carousel and overlay here)
+
+<img width="710" height="914" alt="image" src="https://github.com/user-attachments/assets/940a7a5e-a732-432a-92f1-ee6a99e4e99b" />
 
 Future Improvements
 
